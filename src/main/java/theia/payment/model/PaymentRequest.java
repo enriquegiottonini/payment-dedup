@@ -3,6 +3,7 @@ package theia.payment.model;
 import java.math.BigDecimal;
 
 public record PaymentRequest(
+        String requestId,
         String sourceId,
         String targetId,
         BigDecimal amount,

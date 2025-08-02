@@ -1,5 +1,6 @@
 package theia.payment.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import theia.payment.model.Account;
 import theia.payment.model.PaymentRequest;
@@ -18,6 +19,7 @@ public class PaymentOrchestrator {
         this.accountService = accountService;
     }
 
+    @Cacheable(cacheNames = "payments", key="#paymentRequest.requestId")
     public PaymentResponse createPayment(PaymentRequest paymentRequest) {
         String sourceId = paymentRequest.sourceId();
         String targetId = paymentRequest.targetId();
