@@ -1,4 +1,4 @@
-only readme is AI polished.
+only readme is ai polished.
 
 # RPC Call Deduplication with Request ID and Server-Side Caching
 
@@ -15,13 +15,12 @@ To start the application:
 
 ```bash
 mvn spring-boot:run
+```
 
 Once running, access the Swagger UI:
-```
-```
+
+```bash
 http://localhost:8080/swagger-ui/index.html`
-```
-```
 ```
 
 API Usage
